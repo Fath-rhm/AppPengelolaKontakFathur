@@ -6,6 +6,9 @@
             <file>file:/C:/NetBeansProjects/AppPengelolaKontakFathur/src/database/DatabaseConnection.java</file>
             <file>file:/C:/NetBeansProjects/AppPengelolaKontakFathur/src/database/DatabaseSetup.java</file>
             <file>file:/C:/NetBeansProjects/AppPengelolaKontakFathur/src/view/PengelolaKontakFrame.java</file>
+            <file>file:/C:/NetBeansProjects/AppPengelolaKontakFathur/src/controller/KontakController.java</file>
+            <file>file:/C:/NetBeansProjects/AppPengelolaKontakFathur/src/model/Kontak.java</file>
+            <file>file:/C:/NetBeansProjects/AppPengelolaKontakFathur/src/model/KontakDAO.java</file>
         </group>
     </open-files>
 </project-private>

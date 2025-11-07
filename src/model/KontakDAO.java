@@ -26,11 +26,11 @@ public class KontakDAO {
     
     //method untuk menambahkan kontak ke tabel
     public void addContact(Kontak contact) throws SQLException {
-        String sql = "INSERT INTO contacts (nama, nomor_telepon, kategori) VALUES (?, ?, ?";
+        String sql = "INSERT INTO contacts (nama, nomor_telepon, kategori) VALUES (?, ?, ?)";
         try (Connection conn = DatabaseConnection.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, contact.getNama());
-            pstmt.setString(2, contact.getnomorTelepon());
+            pstmt.setString(2, contact.getNomorTelepon());
             pstmt.setString(3, contact.getKategori());
             pstmt.executeUpdate();
         }
@@ -38,11 +38,11 @@ public class KontakDAO {
     
     //method untuk mengupdate kontak ke tabel
     public void updateContact(Kontak contact) throws SQLException{
-        String sql = "UPDATE contacts SET nama = ?, nomor_telepon = ?, kategori = ?, WHERE id = ?";
+        String sql = "UPDATE contacts SET nama = ?, nomor_telepon = ?, kategori = ? WHERE id = ?";
         try (Connection conn = DatabaseConnection.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, contact.getNama());
-            pstmt.setString(2, contact.getnomorTelepon());
+            pstmt.setString(2, contact.getNomorTelepon());
             pstmt.setString(3, contact.getKategori());
             pstmt.setInt(4, contact.getId());
             pstmt.executeUpdate();
@@ -62,7 +62,7 @@ public class KontakDAO {
      //method untuk mencari kontak di tabel
     public List<Kontak> searchContacts(String keyword) throws SQLException{
         List<Kontak> contacts = new ArrayList<>();
-        String sql = "SELECT * FROM contacts WHERE nama LIKE ? OR nomot_telepon LIKE ?";
+        String sql = "SELECT * FROM contacts WHERE nama LIKE ? OR nomor_telepon LIKE ?";
         try (Connection conn = DatabaseConnection.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)){
             pstmt.setString(1, "%" + keyword + "%");

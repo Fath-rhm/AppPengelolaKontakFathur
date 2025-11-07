@@ -31,11 +31,11 @@ public class Kontak {
         this.nama = nama;
     }
     
-    public String getnomorTelepon(){
+    public String getNomorTelepon(){
         return nomorTelepon;
     }
      
-    public void setnomorTelepon(String nomorTelepon){
+    public void setNomorTelepon(String nomorTelepon){
         this.nomorTelepon = nomorTelepon;
     }
     
